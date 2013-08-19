@@ -1,0 +1,14 @@
+<div ng-controller="workCtrl" id="work" scrollarama sectionscroll>
+<h2>Professional Experience</h2>
+<ul>
+	<li ng-repeat="item in content.workExperience">
+		<a href="{{item.url}}" target="_blank">{{item.company}}</a>
+		<p>
+			{{item.title}}
+		</p>
+		<blockquote>{{item.summary}}</blockquote>
+		<blockquote>{{item.period}}</blockquote>
+		
+	</li>
+</ul>
+</div>

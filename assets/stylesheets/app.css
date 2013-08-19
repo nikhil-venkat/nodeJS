@@ -1,0 +1,77 @@
+.row-fluid [class*="span"] {
+  margin: 0px;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none;
+}
+
+.row-fluid {
+  padding-bottom: 200px;
+}
+
+.displayPic {
+  background: url("../images/mypic.jpg") no-repeat;
+  cursor: pointer;
+  height: 160px;
+  width: 160px;
+  display: block;
+  -moz-box-shadow: 3px 3px 5px 6px #ccc;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  box-shadow: 3px 3px 5px 6px #ccc;
+}
+
+.displayPic:hover {
+  transform: rotate(-2deg);
+  -ms-transform: rotate(-2deg);
+  /* IE 9 */
+  -webkit-transform: rotate(-2deg);
+}
+
+.templateOpacity {
+  opacity: 0.5;
+}
+
+.navbar {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 10;
+}
+.navbar .nav li.active a {
+  -webkit-transition: background 2s ease-in-out;
+  -moz-transition: background 2s ease-in-out;
+  -o-transition: background 2s ease-in-out;
+  transition: background 2s ease-in-out;
+}
+.navbar .navbar-inner {
+  padding-right: 0px;
+  padding-left: 9%;
+}
+
+.fadeIn {
+  opacity: 1;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+.overlay {
+  background: url("../images/loading.gif") 50% 50% no-repeat black;
+  height: 100%;
+  width: 100%;
+  opacity: 0.5;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.template {
+  display: block;
+}
+
+.footer p {
+  text-align: center;
+}
