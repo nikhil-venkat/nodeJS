@@ -1,7 +1,8 @@
-angular.module('myWebsite', ['loading','scrollarama','appService','detectscroll']).
+angular.module('myWebsite', ['loading','scrollarama','appService']).
 config(['$routeProvider', function($routeProvider) {
-  $routeProvider.
-      otherwise({redirectTo: '/home'});
+
+	$routeProvider
+		.otherwise({redirectTo: '/home'});
 }]).run(['$rootScope', '$timeout', '$routeParams','$window', function($rootScope, $timeout, $routeParams,$window){
 	
 	$rootScope.activeTab = 'home';
@@ -9,19 +10,19 @@ config(['$routeProvider', function($routeProvider) {
 	
 	$rootScope.setActiveTab = function(tab){
 		$('html, body').animate({
-        	scrollTop: $($('#'+tab)).offset().top-40
-    	}, 800);
-	}
+			scrollTop: $($('#'+tab)).offset().top-40
+		},800);
+	};
 
 	$rootScope.isScrolledIntoView = function(elem){
-	    var docViewTop = $(window).scrollTop();
-	    var docViewBottom = docViewTop + $(window).height();
+		var docViewTop = $(window).scrollTop();
+		var docViewBottom = docViewTop + $(window).height();
 
-	    var elemTop = $(elem).offset().top;
-	    var elemBottom = elemTop + $(elem).height();
+		var elemTop = $(elem).offset().top;
+		var elemBottom = elemTop + $(elem).height();
 
-	    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-	}
+		return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+	};
 
 
 	$(window).scroll(function () {
@@ -61,6 +62,6 @@ config(['$routeProvider', function($routeProvider) {
 		$rootScope.$apply(function(){
 			$rootScope.activeTab = tab;
 		});
-	}
+	};
 
 }]);

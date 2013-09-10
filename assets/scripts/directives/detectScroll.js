@@ -25,7 +25,7 @@ angular.module('detectscroll', [])
 	return {
 		link: function(scope, elem, attrs) {
 			$(window).scroll(function () {
-				console.log($(elem).scrollTop());
+				//console.log($(elem).scrollTop());
 			});
 		}
 	};

@@ -7,9 +7,10 @@ function resumeCtrl($scope,$rootScope,dataService){
 		$scope.showResume = true;
 	}
 
-	var callback = function(response){
-		$scope.content = response[0].pageData.skills;
-	}
-	dataService.getResumeContent(callback);
+	dataService.getResumeContent(function(response){
+		if(response){
+			$scope.content = response[0].pageData.skills;
+		}
+	});
 }
 resumeCtrl.inject = ['$scope','$rootScope','dataService'];

@@ -1,0 +1,67 @@
+<!doctype html>
+<html ng-app="myWebsite">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="stylesheets/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="stylesheets/app.css" rel="stylesheet" media="screen">
+    <title>nikhil-venkat</title>
+    <!--link rel="stylesheet" href="stylesheets/styles.css" media="screen"-->
+    <!--link rel="stylesheet" href="stylesheets/pygment_trac.css" media="screen"-->
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+</html>
+
+  <body ng-controller="loginCtrl"  loading>
+  
+    <div ng-controller="loginCtrl">
+		<form ng-submit="checkLogin()">
+			<dl>
+				<dt>
+					<label>Username</label>
+				</dt>
+				<dd>
+					<input type="text" ng-model="username"/>
+				</dd>
+				<dt>
+					<label>Password</label>
+				</dt>
+				<dd>
+					<input type="password" ng-model="password"/>
+				</dd>
+			</dl>
+			<p class="error">Username and password did not match</p>
+			<input type="submit" value="login"/>
+		</form>
+	</div>
+
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    <script src="scripts/lib/md5/md5.min.js"></script>
+    <script src="scripts/lib/jquery.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>  
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script> 
+
+    <!--Data Services-->
+    <script src="scripts/services/dataService.js"></script>
+
+    <!--Modules-->
+    <script src="scripts/controllers/app.js"></script>
+
+    <!--Controllers-->
+    
+    <script src="scripts/controllers/loginCtrl.js"></script>
+     
+    <!--Directives-->
+    <script src="scripts/directives/loading.js"></script>
+	<script src="scripts/directives/scrollarama.js"></script>
+	<script src="scripts/directives/detectScroll.js"></script>    
+
+  </body>
+</html>
